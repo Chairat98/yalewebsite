@@ -4,6 +4,11 @@ body{
     background-image: url("soa1.jpg");
     min-height: 100vh;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
   header{
     margin: 0%;
     background-color: #f1f1f1;
