@@ -1,7 +1,7 @@
 
 body{
   margin: 0%;
-  background-image: url("../HTMLcss/images/soa1.jpg");
+  background-image: url("soa1.jpg");
   min-height: 100vh;
 }
 
@@ -164,7 +164,7 @@ header{
 }
 .column {
   display: flex;
-  background-image: url("../HTMLcss/images/soa1.jpg");
+  background-image: url("soa1.jpg");
   float: left;
   padding: 1px;
   width: 100%;
