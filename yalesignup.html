@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="yalelogindrip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="yalebackupdrip.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <title>Log in/Sign in</title>
 </head>
 <body>
@@ -23,6 +25,13 @@
                 <a href=""><i class="fa fa-file-text"></i> NEWS</a>
                 <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
                 <a class="active" href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+                <a class="anime" href="yalesignup.html"><i class="fa fa-stop"></i> NO DISCO</a>
+
+                <button class="animation">Start Animation</button>
+                <button class="btn1">Slide up</button>
+                <button class="btn2">Slide down</button>
+                
             </div>
         </div>
         <span class="title">Yale School of Art<i class="fa fa-paint-brush"></i></span>
@@ -41,6 +50,12 @@
             <a href=""><i class="fa fa-file-text"></i> NEWS</a>
             <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
             <a class="active" href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+            <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+            <a class="anime" href="yalesignup.html"><i class="fa fa-stop"></i> NO DISCO</a>
+
+            <button class="animation">Start Animation</button>
+            <button class="btn1">Slide up</button>
+            <button class="btn2">Slide down</button>
         </aside>
     
     <div class= "menu-mobile">
@@ -53,7 +68,7 @@
         <main class="content">
             <div class="column">
     
-                <div class="scrollpost">
+                <div class="scrollpost" class="ui-widget-content">
 
                     <div class="scrollpost-post">
 
@@ -103,6 +118,35 @@
                             </div>
                             
                         </form>
+                        
+                        <script>
+
+                            $(document).ready(function(){
+                                $(".animation").click(function(){
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+
+                                });
+                             });
+
+                            $(document).ready(function(){
+                                $(".btn1").click(function(){
+                                    $("p").slideUp();
+                                });
+                                $(".btn2").click(function(){
+                                    $("p").slideDown();
+                                });
+                            });
+
+                            $( function() {
+                                $( ".scrollpost-post" ).draggable();
+                             });
+
+                        </script>
                     </div>
 
                 </div>
