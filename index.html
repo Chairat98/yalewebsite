@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="yalebackupdrip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="yalebackupdrip.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <title>HOME</title>
 </head>
 <body>
@@ -23,6 +25,12 @@
                 <a href=""><i class="fa fa-file-text"></i> NEWS</a>
                 <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
                 <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+                <a class="anime" href="index.html"><i class="fa fa-stop"></i> NO DISCO</a>
+                
+                <button class="animation">Start Animation</button>
+                <button class="btn1">Slide up</button>
+                <button class="btn2">Slide down</button>
             </div>
         </div>
         <span class="title">Yale School of Art<i class="fa fa-paint-brush"></i></span>
@@ -41,6 +49,13 @@
             <a href=""><i class="fa fa-file-text"></i> NEWS</a>
             <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
             <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+            <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+            <a class="anime" href="index.html"><i class="fa fa-stop"></i> NO DISCO</a>
+            
+            <button class="animation">Start Animation</button>
+            <button class="btn1">Slide up</button>
+            <button class="btn2">Slide down</button>
+            
         </aside>
     
     <div class= "menu-mobile">
@@ -55,12 +70,14 @@
     
                 <div class="scrollpost">
                     <form action="/action_page.php">
-                        <textarea id="post" name="post">Write here...</textarea>
+
+                        <textarea id="post" placeholder="Write here..." onfocus="myPost()" onblur="myPost()"></textarea>
+                        
                         <br>
                         <button class="icon" ><i class="fa fa-paper-plane"></i></button>
                         <button class="icon" ><i class="fa fa-image"></i></button>   
                     </form>
-                    <div class="scrollpost-post">
+                    <div class="scrollpost-post"  class="ui-widget-content">
                         <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet 
                             fringilla ante auctor iaculis. Donec tempor massa eget sapien scelerisque, 
                             non mattis est tincidunt. Nam commodo diam et consectetur varius. Donec nec quam euismod, 
@@ -105,8 +122,65 @@
                         <button class="icon-editor" >Editor</button> 
                         
                     </div>
-
                     
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img width="100%" height="315" src="images/1.jpg">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img width="100%" height="315" src="images/2.jpg">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 3</div>
+                          <img width="100%" height="315" src="images/3.jpg">
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                    </div>
+                        <br>
+                        
+                    <div style="text-align:center">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                    <script>
+
+                            
+                            $(document).ready(function(){
+                                $(".animation").click(function(){
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+
+                                });
+                            });
+
+                            $(document).ready(function(){
+                                $(".btn1").click(function(){
+                                    $("p").slideUp();
+                                });
+                                $(".btn2").click(function(){
+                                    $("p").slideDown();
+                                });
+                            });
+
+                            $( function() {
+                                $( ".scrollpost-post" ).draggable();
+                            } );
+
+                        </script>
                     
                 </div>
                 
