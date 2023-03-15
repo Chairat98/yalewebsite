@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="yalebackupdrip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="yalebackupdrip.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <title>PUBLICATIONS</title>
 </head>
 <body>
@@ -23,8 +25,15 @@
                 <a href=""><i class="fa fa-file-text"></i> NEWS</a>
                 <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
                 <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i>DISCO</a>
+                <a class="anime" href="yalepublication.html"><i class="fa fa-stop"></i>NO DISCO</a>
+                
+                <button class="animation">Start Animation</button>
+                <button class="btn1">Slide up</button>
+                <button class="btn2">Slide down</button>
             </div>
         </div>
+        
         <span class="title">Yale School of Art<i class="fa fa-paint-brush"></i></span>
         <button class="icon-search" ><i class="fa fa-search"></i></button>  
     </header>
@@ -41,6 +50,12 @@
             <a href=""><i class="fa fa-file-text"></i> NEWS</a>
             <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
             <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+            <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+            <a class="anime" href="../HTMLcss/yalepublication.html"><i class="fa fa-stop"></i> NO DISCO</a>
+            
+            <button class="animation">Start Animation</button>
+            <button class="btn1">Slide up</button>
+            <button class="btn2">Slide down</button>
         </aside>
     
     <div class= "menu-mobile">
@@ -56,7 +71,7 @@
                 <div class="scrollpost">
 
                     <h1>Publications</h1>
-                    <div class="scrollpost-post">
+                    <div class="scrollpost-post" class="ui-widget-content">
                         <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet 
                             fringilla ante auctor iaculis. Donec tempor massa eget sapien scelerisque, 
                             non mattis est tincidunt. Nam commodo diam et consectetur varius. Donec nec quam euismod, 
@@ -101,33 +116,60 @@
                         <button class="icon-editor" >Editor</button> 
                         
                     </div>
+                    
+                    <script>
 
-                    
-                    
+                        $(document).ready(function(){
+                            $(".animation").click(function(){
+                                $("p").fadeTo(1000, 0);
+                                $("p").fadeTo(1000, 1);
+                                $("p").fadeTo(1000, 0);
+                                $("p").fadeTo(1000, 1);
+                                $("p").fadeTo(1000, 0);
+                                $("p").fadeTo(1000, 1);
+
+                            });
+                        });
+
+                        $(document).ready(function(){
+                            $(".btn1").click(function(){
+                                $("p").slideUp();
+                            });
+                            $(".btn2").click(function(){
+                                $("p").slideDown();
+                            });
+                        });
+
+                        $( function() {
+                            $( ".scrollpost-post" ).draggable();
+                        } );
+
+                    </script>
+ 
                 </div>
-            <div class="column2">
-                <div class="pubscrollpost-right"><header class="pubsideheader">“News from news haven” archive  </header>
-                    <div class="apply-post">
+                <div class="column2">
+                    <div class="pubscrollpost-right"><header class="pubsideheader">“News from news haven” archive  </header>
+                        <div class="apply-post">
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                        nulla et dictum interdum, nisi lorem egestas vitae scel<span id="admiss">...</span><span id="more">
-                        erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
-                        Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-                        In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+                            nulla et dictum interdum, nisi lorem egestas vitae scel<span id="admiss">...</span><span id="more">
+                            erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
+                            Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+                            In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                            <button onclick="myFunction()" id="myBtn">Read more</button>
 
+                        </div>
                     </div>
-                </div>
 
-                <div class="pubscrollpost-right"><header class="pubsideheader">Your schedule</header>
-                    <div class="month">      
+                    <div class="pubscrollpost-right"><header class="pubsideheader">Your schedule</header>
+                        <div class="month">      
                         <ul>
-                          <li class="prev">&#10094;</li>
-                          <li class="next">&#10095;</li>
-                          <li>
-                            February<br>
-                            <span style="font-size:1vw">2023</span>
-                          </li>
+                              <li class="prev">&#10094;</li>
+                              <li class="next">&#10095;</li>
+                              <li>
+                                February<br>
+                                <span style="font-size:1vw">2023</span>
+                              </li>
                         </ul>
                       </div>
                       
