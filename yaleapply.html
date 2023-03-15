@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="yalelogindrip.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="yalebackupdrip.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <title>Apply to the school</title>
 </head>
 <body>
@@ -23,6 +25,12 @@
                 <a href=""><i class="fa fa-file-text"></i> NEWS</a>
                 <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
                 <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+                <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+                <a class="anime" href="yaleapply.html"><i class="fa fa-stop"></i> NO DISCO</a>
+                
+                <button class="animation">Start Animation</button>
+                <button class="btn1">Slide up</button>
+                <button class="btn2">Slide down</button>
             </div>
         </div>
         <span class="title">Yale School of Art<i class="fa fa-paint-brush"></i></span>
@@ -41,6 +49,12 @@
             <a href=""><i class="fa fa-file-text"></i> NEWS</a>
             <a href="yaleevents.html"><i class="fa fa-bell"></i> PUBLIC EVENTS</a>
             <a href="yalesignup.html"><i class="fa fa-user"></i> PROFILE</a>
+            <a class="anime" onclick="disco()"><i class="fa fa-play-circle"></i> DISCO</a>
+            <a class="anime" href="yaleapply.html"><i class="fa fa-stop"></i> NO DISCO</a>
+
+            <button class="animation">Start Animation</button>
+            <button class="btn1">Slide up</button>
+            <button class="btn2">Slide down</button>
         </aside>
     
     <div class= "menu-mobile">
@@ -60,22 +74,22 @@
 
                             <h2>Graduate Admission</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                            nulla et dictum interdum, nisi lorem egestas vitae scel<span id="gradadmission">...</span><span id="more">
+                            nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">
                             erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                             Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                             In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                            <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <button onclick="mymoretextFunction()" id="myBtn">Read more</button>
                         </div>
 
                         <div class="apply-post">
 
                             <h2>Graduate Study Areas</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
-                            nulla et dictum interdum, nisi lorem egestas vitae scel<span id="admiss">...</span><span id="more">
+                            nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots1">...</span><span id="more1">
                             erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                             Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                             In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                            <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <button onclick="mymoretextFunction()" id="myBtn1">Read more</button>
 
 
                         </div>
@@ -88,7 +102,7 @@
                             erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                             Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                             In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                            <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <button onclick="mymoretextFunction()" id="myBtn">Read more</button>
 
 
                         </div>
@@ -105,7 +119,7 @@
                             erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                             Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                             In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                        <button onclick="myFunction()" id="myBtn">Read more</button>
+                        <button onclick="mymoretextFunction()" id="myBtn">Read more</button>
                     
                         </div>
 
@@ -118,7 +132,7 @@
                                 erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                                 Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                                 In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                            <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <button onclick="mymoretextFunction()" id="myBtn">Read more</button>
                         
                         </div>
 
@@ -130,15 +144,40 @@
                                 erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.
                                 Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                                 In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                            <button onclick="myFunction()" id="myBtn">Read more</button>
+                            <button onclick="mymoretextFunction()" id="myBtn">Read more</button>
                         
                         </div>
+                        
+                        <script>
+                            
+                            $(document).ready(function(){
+                                $(".animation").click(function(){
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
+                                    $("p").fadeTo(1000, 0);
+                                    $("p").fadeTo(1000, 1);
 
+                                });
+                            });
 
+                            $(document).ready(function(){
+                                $(".btn1").click(function(){
+                                    $("p").slideUp();
+                                });
+                                $(".btn2").click(function(){
+                                    $("p").slideDown();
+                                });
+                            });
+
+                            $( function() {
+                                $( ".apply-post" ).draggable();
+                            } );
+
+                        </script>                      
                     </div>
-
-                </div>
-            
+                </div>  
             </div>
         </main>
     </div>
