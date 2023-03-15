@@ -1,14 +1,8 @@
-
 body{
     margin: 0%;
     background-image: url("soa1.jpg");
     min-height: 100vh;
   }
-
-  * {
-    box-sizing: border-box;
-  }
-
   header{
     margin: 0%;
     background-color: #f1f1f1;
@@ -16,9 +10,6 @@ body{
     height: fit-content;
   }
   
-  h1{
-    margin: auto;
-  }
   
   .title{
     color: #000000;
@@ -145,6 +136,7 @@ body{
     .sidebar a.anime {
       background-color: #fe9900;
       color: #000000;
+      cursor: pointer;
     }
      
     .sidebar a.active {
@@ -181,7 +173,6 @@ body{
   .scrollpost{
   display: flex;
   flex-wrap: wrap;
-
   height: 100%;
   width: 100%;
   justify-content: space-evenly;
@@ -193,9 +184,6 @@ body{
   height: fit-content;
   width:45%;
   margin: 10px;
-  border-style: solid;
-  border-bottom: solid;
-  border-width: thin;
   }
   
   .apply-post{
@@ -277,6 +265,10 @@ body{
   .img-post{
    width: 100%;
    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
   }
   
   /* Add padding to containers */
